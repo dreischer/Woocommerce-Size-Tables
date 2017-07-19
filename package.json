@@ -1,0 +1,25 @@
+{
+  "name": "size-table",
+  "version": "1.0.0",
+  "description": "Wordpress size table plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreischer/size-table.git"
+  },
+  "author": "David Reischer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dreischer/size-table/issues"
+  },
+  "homepage": "https://github.com/dreischer/size-table#readme",
+  "dependencies": {
+    "buble": "^0.15.2",
+    "buble-loader": "^0.4.1",
+    "preact": "^8.2.1",
+    "webpack": "^3.3.0"
+  }
+}
