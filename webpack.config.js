@@ -2,11 +2,11 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    'front-end': './front-end/js/index.js',
-    'back-end': './back-end/js/index.jsx'
+    'front-end': './js/front-end/index.js',
+    'back-end': './js/back-end/index.jsx'
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist/size-table/js'),
     filename: '[name].js'
   },
   devtool: 'source-map',

@@ -8,7 +8,7 @@
 * Author URI: https://uk.linkedin.com/in/davidreischer/en
 **/
 
-include( plugin_dir_path( __FILE__ ) . 'front-end/main.php');
-include( plugin_dir_path( __FILE__ ) . 'back-end/main.php');
+include( plugin_dir_path( __FILE__ ) . 'front-end.php');
+include( plugin_dir_path( __FILE__ ) . 'back-end.php');
 
 ?>

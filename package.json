@@ -20,6 +20,8 @@
     "buble": "^0.15.2",
     "buble-loader": "^0.4.1",
     "preact": "^8.2.1",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2",
     "webpack": "^3.3.0"
   }
 }
