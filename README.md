@@ -7,6 +7,9 @@ Two options:
 2. Upload `/dist/size-table.zip` via the WP UI
 
 ## Usage
+Each product has a new tab "Size table". To show a size table for this product tick the checkbox. Click in any of the fields to update the values:
+![image](https://user-images.githubusercontent.com/5756475/28501636-f371e110-6fd7-11e7-9802-0762fc993048.png)
+
 
 ## Build
 ```sh
