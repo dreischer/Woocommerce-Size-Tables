@@ -18,6 +18,6 @@ function getData () {
   try {
     return JSON.parse(document.getElementById(config.DATA_ELEMENT).value)
   } catch (e) {
-    return null
+    return {}
   }
 }

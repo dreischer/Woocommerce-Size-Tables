@@ -8,18 +8,51 @@ function woo_add_size_table_tab ($tabs) {
   }
 
   $tabs['size_table_tab'] = array(
-    'title' 	=> __( 'Size table', 'woocommerce' ),
+    'title' 	=> __( 'Size guide', 'woocommerce' ),
     'priority' 	=> 50,
     'callback' 	=> 'size_table_tab_content'
   );
+
+  add_action('get_footer', 'sizeTable_add_footer_styles');
 
   return $tabs;
 }
 
 function size_table_tab_content () {
-  echo '<h2>Size table</h2>';
-  echo '<p>Here\'s your new product tab.</p>';
-  echo '<p class="abc"></p>';
+  $json = htmlspecialchars_decode(get_post_meta(get_the_ID(), '_size_table_data', true));
+  $data = json_decode($json)->sizes;
+
+  function build_table ($array) {
+    $html = '<table>';
+
+    foreach ($array as $rowIndex => $cells) {
+      $html .= '<tr>';
+
+      foreach ($cells as $columnIndex => $val) {
+        $openTag = $rowIndex == 0 ? '<th>' : '<td>';
+        $closeTag = $rowIndex == 0 ? '</th>' : '</td>';
+        $value = $rowIndex == 0 && $columnIndex == 0 ? 'Size' : $val;
+
+        $html .= $openTag . $value . $closeTag;
+      }
+
+      $html .= '</tr>';
+    }
+
+    $html .= '</table>';
+
+    return $html;
+  }
+
+  echo '<div class="size-table">';
+  echo '<div class="size-table-description">All measurements are in cm</div>';
+  echo build_table($data);
+  echo '</div>';
 }
+
+function sizeTable_add_footer_styles () {
+  $path = plugins_url( 'style.css', __FILE__ );
+  wp_enqueue_style('size-table', $path);
+};
 
 ?>
