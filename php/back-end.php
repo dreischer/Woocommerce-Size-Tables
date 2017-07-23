@@ -11,16 +11,6 @@ function add_size_table_product_data_tab ( $product_data_tabs ) {
     return $product_data_tabs;
 }
 
-// add style for new options tab
-add_action('admin_head', 'wcpp_custom_style');
-function wcpp_custom_style () {
-  ?>
-  <style>
-  #woocommerce-product-data ul.wc-tabs li.size-table-tab_options a:before { font-family: WooCommerce; content: '\e006'; }
-  </style>
-  <?php
-}
-
 // add content of new options tab
 add_action('woocommerce_product_data_panels', 'woocom_custom_product_data_fields');
 function woocom_custom_product_data_fields () {
@@ -33,7 +23,7 @@ function woocom_custom_product_data_fields () {
       woocommerce_wp_checkbox(array(
         'id' => '_show_size_table',
         'label' => 'Show size table',
-        'description' => 'Tick if size table should be shown on product page',
+        'description' => 'Tick to show size table on product page',
         'desc_tip' => true
       ));
 

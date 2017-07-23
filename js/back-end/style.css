@@ -1,0 +1,62 @@
+#size_table_product_data {
+  padding: 20px;
+}
+#woocommerce-product-data ul.wc-tabs li.size-table-tab_options a:before {
+  font-family: WooCommerce; content: '\e006';
+}
+
+#size_table_container .size-table {
+  margin-top: 20px;
+  width: 100%;
+  overflow: scroll;
+  padding: 5px;
+}
+
+#size_table_container .size-table table {
+  border-spacing:0;
+}
+#size_table_container .size-table table tr:nth-child(even) input {
+  background: #d3d3d3;
+}
+#size_table_container .size-table table th,
+#size_table_container .size-table table td {
+  padding: 0;
+  border-left: 1px solid #333;
+}
+#size_table_container .size-table table th {
+  border-bottom: 1px solid #333;
+}
+#size_table_container .size-table table th:first-of-type,
+#size_table_container .size-table table td:first-of-type {
+  border-left: none;
+}
+#size_table_container .size-table table th input {
+  font-weight: bold;
+}
+#size_table_container .size-table table input {
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  width: 100px;
+  box-shadow: none;
+}
+#size_table_container .size-table table th:first-of-type input,
+#size_table_container .size-table table td:first-of-type input {
+  width: 150px;
+}
+#size_table_container .size-table table td:first-of-type input {
+  font-weight: bold;
+}
+#size_table_container .size-table table input:focus {
+  outline: 2px solid #5b9dd9;
+  box-shadow: 0 0 2px rgba(30,140,190,.8);
+}
+#size_table_container .size-table .btn {
+  border: 1px solid #333;
+  border-radius: 2px;
+  background: transparent;
+  margin: 10px 10px 10px 0px;
+  cursor: pointer;
+  padding: 10px;
+  box-shadow: 0px 0px 1px 0px rgba(117,117,117,0.5);
+}

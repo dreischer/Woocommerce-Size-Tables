@@ -12,7 +12,7 @@ watch:
 	$(BIN)/webpack -p --progress --watch
 
 lint:
-	$(BIN)/standard "js/**" --verbose | $(BIN)/snazzy
+	$(BIN)/standard "js/**/*.{js,jsx}" --verbose | $(BIN)/snazzy
 
 clean:
 	rm -rf ./dist
