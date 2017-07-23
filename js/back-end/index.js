@@ -10,7 +10,6 @@ const config = {
 React.render(<Table data={getData()} onUpdate={setData} />, document.getElementById(config.CONTAINER_ELEMENT))
 
 function setData (data) {
-  console.log('set data: ', data)
   document.getElementById(config.DATA_ELEMENT).value = JSON.stringify(data)
 }
 
