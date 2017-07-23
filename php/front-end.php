@@ -3,7 +3,7 @@
 // add tab to actual product page
 add_filter( 'woocommerce_product_tabs', 'woo_add_size_table_tab' );
 function woo_add_size_table_tab ($tabs) {
-  if (get_post_meta(get_the_ID(), '_show_size_table', true) == 'no') {
+  if (get_post_meta(get_the_ID(), '_show_size_table', true) != 'yes') {
     return $tabs;
   }
 
