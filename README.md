@@ -14,7 +14,7 @@ Each product has a new tab "Size table". To show a size table for this product t
 ## Build
 ```sh
 git clone git@github.com:dreischer/size-table.git
-npm install
+yarn install
 make build
 ```
 This will create the contents of `/dist/`
