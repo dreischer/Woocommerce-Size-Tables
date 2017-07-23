@@ -3,12 +3,13 @@
 // add options tab to product admin page
 add_filter('woocommerce_product_data_tabs', 'add_size_table_product_data_tab');
 function add_size_table_product_data_tab ( $product_data_tabs ) {
-    $product_data_tabs['size-table-tab'] = array(
-        'label' => 'Size table',
-        'target' => 'size_table_product_data',
-        'class' => array('show_if_simple', 'show_if_variable'),
-    );
-    return $product_data_tabs;
+  $product_data_tabs['size-table-tab'] = array(
+    'label' => 'Size table',
+    'target' => 'size_table_product_data',
+    'class' => array('show_if_simple', 'show_if_variable'),
+  );
+
+  return $product_data_tabs;
 }
 
 // add content of new options tab
