@@ -52,7 +52,8 @@ function woocom_save_proddata_custom_fields ($post_id) {
 // load scripts
 add_action('admin_enqueue_scripts', 'enqueue_scripts');
 function enqueue_scripts ($page) {
-  if($page != 'post.php') return;
+
+  if (!preg_match('/post(-new)?\.php/i', $page)) return;
   wp_register_script('size-table-back-end', plugins_url( 'js/back-end.js', __FILE__ ), null, null, true);
   wp_enqueue_script('size-table-back-end');
 }
