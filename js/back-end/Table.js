@@ -43,9 +43,8 @@ export default class Table extends Component {
   getTableContent (sizes) {
     return sizes.map((row, i) => {
       const columns = row.map((val, j) => {
-        const disabled = i === 0 && j === 0
         const update = (e) => this.updateData(i, j, e.currentTarget.value)
-        const cell = <Cell onUpdate={update} val={val} disabled={disabled} />
+        const cell = <Cell onUpdate={update} val={val} />
         return i === 0 ? <th>{cell}</th> : <td>{cell}</td>
       })
 

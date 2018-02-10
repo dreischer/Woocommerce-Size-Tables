@@ -1,3 +1,8 @@
+.size-table {
+  text-align: left;
+  display: inline-block;
+}
+
 .size-table .size-table-description {
   text-align: center;
 }
@@ -20,5 +25,5 @@
 }
 
 .size-table tr:hover {
-    background: rgba(238, 238, 238, 0.31);
+  background: rgba(238, 238, 238, 0.31);
 }

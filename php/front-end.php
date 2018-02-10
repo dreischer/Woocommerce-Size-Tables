@@ -9,7 +9,7 @@ function woo_add_size_table_tab ($tabs) {
 
   $tabs['size_table_tab'] = array(
     'title' 	=> __( 'Size guide', 'woocommerce' ),
-    'priority' 	=> 50,
+    'priority' 	=> 1,
     'callback' 	=> 'size_table_tab_content'
   );
 
@@ -31,7 +31,7 @@ function size_table_tab_content () {
       foreach ($cells as $columnIndex => $val) {
         $openTag = $rowIndex == 0 ? '<th>' : '<td>';
         $closeTag = $rowIndex == 0 ? '</th>' : '</td>';
-        $value = $rowIndex == 0 && $columnIndex == 0 ? 'Size' : $val;
+        $value = $rowIndex == 0 && $columnIndex == 0 ? 'UK size' : $val;
 
         $html .= $openTag . $value . $closeTag;
       }
@@ -45,7 +45,7 @@ function size_table_tab_content () {
   }
 
   echo '<div class="size-table">';
-  echo '<div class="size-table-description">All measurements are in cm</div>';
+  // echo '<div class="size-table-description">All measurements in cm</div>';
   echo build_table($data);
   echo '</div>';
 }
