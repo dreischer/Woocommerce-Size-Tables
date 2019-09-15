@@ -33,7 +33,7 @@ function woocom_custom_product_data_fields ($post_id) {
         'placeholder' => 25,
         'id' => '_size_table_custom_priority',
         'label' => 'Custom tab priority',
-        'description' => 'This field is optional. The default value is 25. Set the value to e.g. 1 to make the table show firs.',
+        'description' => 'This field is optional. The default value is 25. Set the value to e.g. 1 to make the table show first.',
         'desc_tip' => true
       ));
 
