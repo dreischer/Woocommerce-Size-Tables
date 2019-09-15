@@ -17,13 +17,13 @@
   },
   "homepage": "https://github.com/dreischer/size-table#readme",
   "dependencies": {
-    "buble": "^0.15.2",
-    "buble-loader": "^0.4.1",
-    "css-loader": "^0.28.4",
-    "preact": "^8.2.1",
-    "snazzy": "^7.0.0",
-    "standard": "^10.0.2",
-    "style-loader": "^0.18.2",
-    "webpack": "^3.3.0"
+    "buble": "^0.19.8",
+    "buble-loader": "^0.5.1",
+    "css-loader": "^3.2.0",
+    "preact": "*",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.40.2"
   }
 }
