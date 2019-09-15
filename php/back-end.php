@@ -14,7 +14,7 @@ function add_size_table_product_data_tab ( $product_data_tabs ) {
 
 // add content of new options tab
 add_action('woocommerce_product_data_panels', 'woocom_custom_product_data_fields');
-function woocom_custom_product_data_fields () {
+function woocom_custom_product_data_fields ($post_id) {
   global $post;
   ?>
   <div id='size_table_product_data' class='panel woocommerce_options_panel' >
@@ -25,6 +25,15 @@ function woocom_custom_product_data_fields () {
         'id' => '_show_size_table',
         'label' => 'Show size table',
         'description' => 'Tick to show size table on product page',
+        'desc_tip' => true
+      ));
+
+      woocommerce_wp_text_input(array(
+        'type' => 'number',
+        'placeholder' => 25,
+        'id' => '_size_table_custom_priority',
+        'label' => 'Custom tab priority',
+        'description' => 'This field is optional. The default value is 25. Set the value to e.g. 1 to make the table show firs.',
         'desc_tip' => true
       ));
 
@@ -44,6 +53,9 @@ add_action('woocommerce_process_product_meta', 'woocom_save_proddata_custom_fiel
 function woocom_save_proddata_custom_fields ($post_id) {
   $checkbox = isset($_POST['_show_size_table']) ? 'yes' : 'no';
   update_post_meta($post_id, '_show_size_table', $checkbox);
+
+  $priority = isset($_POST['_size_table_custom_priority']) ? $_POST['_size_table_custom_priority'] : 25;
+  update_post_meta($post_id, '_size_table_custom_priority', $priority);
 
 	$hidden_field = $_POST['_size_table_data'];
 	update_post_meta( $post_id, '_size_table_data', esc_attr( $hidden_field ) );

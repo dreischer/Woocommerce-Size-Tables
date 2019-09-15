@@ -6,10 +6,12 @@ function woo_add_size_table_tab ($tabs) {
   if (get_post_meta(get_the_ID(), '_show_size_table', true) != 'yes') {
     return $tabs;
   }
+  $priority = get_post_meta(get_the_ID(), '_size_table_custom_priority', true);
+  $priority = empty($priority) ? 25 : $priority;
 
   $tabs['size_table_tab'] = array(
     'title' 	=> __( 'Size guide', 'woocommerce' ),
-    'priority' 	=> 1,
+    'priority' 	=> $priority,
     'callback' 	=> 'size_table_tab_content'
   );
 
